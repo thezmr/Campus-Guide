@@ -3,14 +3,19 @@
 # 首页（host）:
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/1.png" width="50%" height="50%">
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/2.png" width="50%" height="50%">
+
 # 校园简介（info）：
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/intro.png" width="50%" height="50%">
+
 # 校园导览（map）：
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/map.png" width="50%" height="50%">
+
 # 校园风光（photo）：
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/photo.png" width="50%" height="50%">
+
 # 学校分数线（grade）：
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/grade.png" width="50%" height="50%">
+
 # 校内找队友（fair）：
 <img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/friend.png" width="50%" height="50%">
 
