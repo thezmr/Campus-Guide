@@ -111,24 +111,78 @@ page {
   margin-top: 10%;
   border-radius: 20rpx;
   background: #eee;
-  box-shadow: 0px 3px 6px #f2edf0;
+  box-shadow: 1px 6px 6px 1px#f2edf0;
   background-position: center;
   background-size: 100% 100%;
   background-image: url(https://1-1259298322.cos.ap-chengdu.myqcloud.com/board1.png);
 }
-.billBoard:hover{
+
+.billBoard:hover {
   animation: touch 0.7s ease;
 }
-.askBoard {
+
+.weatherBoard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 80%;
   height: 100rpx;
   margin: auto;
   margin-top: 15%;
   border-radius: 20rpx;
-  background: #eee;
-  box-shadow: 0px 3px 6px #f2edf0;
+  background: #c2e078;
+  box-shadow: 1px 6px 6px 1px#f2edf0;
+}
+
+.weatherBoard:hover {
+  animation: touch 0.7s ease;
+}
+
+.base {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 20rpx 120% 20rpx 20rpx;
+}
+
+.low {
+  height: 100%;
+  width: 90%;
+  background: #badcdd;
+  border-radius: 20rpx 200% 0 20rpx;
+}
+
+.low2 {
+  height: 100%;
+  width: 85%;
+  color: white;
+  font-size: 60rpx;
+  padding-top: 2%;
+  padding-left: 10%;
+  box-sizing: border-box;
+  background: #547b97;
+  border-radius: 20rpx 200% 0 20rpx;
+}
+.weather{
+  font-size: 40rpx;
+  color: #eee;
+  margin-left: 20rpx;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 200rpx;
+  margin-top: 15%;
+  background: #2bacea;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.btmword {
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: white;
 }
 
 @keyframes touch {

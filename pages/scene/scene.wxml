@@ -1,8 +1,10 @@
 <header titleTxt="返回" back="{{back}}" showAvatar="{{showAvatar}}" hideHeader="{{hideHeader}}" background="" boxshadow="">
 </header>
-<image class="photo" src="{{photoUrl}}" mode='aspectFill'></image>
-<view class="place">{{place}}</view>
+<image wx:if="{{!showPhoto2}}" class="photo" src="{{photoUrl}}" mode='aspectFill' ></image>
+<image wx:if="{{showPhoto2}}" class="photo2" src="{{photoUrl2}}" mode='aspectFill' ></image>
+<view wx:if="{{!showPhoto2}}" class="place">{{place}}</view>
+<view wx:if="{{showPhoto2}}" class="place">{{place2}}</view>
 <view class="download" catchtap="downloadTap">
-  <image class="downloadImg" src="../../images/add.png"></image>
+  <image class="downloadImg" src="../../images/add.png" ></image>
 </view>
 <add imgSrc="../../images/new.png" color="#ff5964" boxshadow="" bindcustomevent="getPhoto"></add>

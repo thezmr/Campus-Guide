@@ -1,0 +1,14 @@
+<view class="pop-container {{show ? 'show':''}}">
+  <view class="title-bar" catchtap="popTap">
+    <view class="pop-title">
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="list-container">
+    <view class="list" wx:for="{{placeList}}" wx:key="item" catchtap="listTap" data-bean="{{item}}">
+      <image class="icon" src="../../images/position.png"></image>
+      <view class="placeName">{{item.name}}</view>
+      <view class="distance">距您约{{distance}}km</view>
+      <image class="go" src="../../images/go.png"></image>
+    </view>
+  </scroll-view>
+</view>

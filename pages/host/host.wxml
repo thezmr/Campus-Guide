@@ -1,4 +1,4 @@
-<header  titleTxt="海大导览" hideHeader="{{hideHeader}}"></header>
+<header titleTxt="海大导览" hideHeader="{{hideHeader}}"></header>
 <view class="buttonList">
   <view class="infoButton" catchtap="infoTap">
     <image class="infoImg" src="../../images/info.png"></image>
@@ -20,11 +20,26 @@
     <image class="cardImg" src="../../images/wenchuang.png"></image>
   </view>
   <view class="card" catchtap="gradeTap">
-     <text class="cardTxt">海大</text>
-     <text class="cardTxt">招生</text>
+    <text class="cardTxt">海大</text>
+    <text class="cardTxt">招生</text>
     <image class="cardImg" src="../../images/history.png"></image>
   </view>
 </view>
 <view class="billBoard" catchtap="boardTap">
 </view>
-<view class="askBoard"></view>
+<view class="weatherBoard">
+  <view class="base">
+    <view class="low">
+      <view class="low2">
+      {{temp}}˚C
+      <text class="weather">{{weather}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="bottom">
+  <text class="btmword">数据来源：大连海事大学官网</text>
+  <text class="btmword">设计开发：孙昊</text>
+</view>

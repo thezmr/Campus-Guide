@@ -1,4 +1,5 @@
 // pages/host/host.js
+var amapFile = require('../../components/amap-wx.js');
 Page({
   /**
    * 页面的初始数据
@@ -6,6 +7,8 @@ Page({
   data: {
     hideHeader: true,
     phoneWidth: 0,
+    temp: 0,
+    weather:""
   },
 
   onPageScroll(e) {
@@ -25,7 +28,7 @@ Page({
       url: '../info/info',
     })
   },
-  sceneTap(){
+  sceneTap() {
     wx.navigateTo({
       url: '../scene/scene',
     })
@@ -40,16 +43,38 @@ Page({
       url: '../grade/grade',
     })
   },
-  boardTap(){
+  boardTap() {
     wx.navigateTo({
       url: '../fair/fair'
+    })
+  },
+  _getWeather: function() {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({
+      key: 'cfc126eb43734d4898544d6822987b47'
+    });
+    myAmapFun.getWeather({
+      success: function(data) {
+        if (data.city) {
+          that.setData({
+            temp: data.liveData.temperature,
+            weather: data.liveData.weather,
+          })
+        }
+        //成功回调
+        console.log(data)
+      },
+      fail: function(info) {
+        //失败回调
+        console.log(info)
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+     this._getWeather()
   },
 
   /**
@@ -63,41 +88,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
 
   }
 })

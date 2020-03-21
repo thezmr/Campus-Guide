@@ -9,7 +9,11 @@ Page({
     showAvatar:false,
     back:true
   },
-
+ goTap(){
+   wx.navigateTo({
+     url: '../map/map',
+   })
+ },
   onPageScroll(e) {
     let phoneWidth = (wx.getSystemInfoSync().windowWidth) / 3;
     if (e.scrollTop > phoneWidth) {

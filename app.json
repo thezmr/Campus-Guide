@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/film/film",
     "pages/host/host",
+    "pages/film/film",
     "pages/scene/scene",
     "pages/test/test",
     "components/popout/popout",
     "components/search/search",
+    "components/map/map",
     "components/add/add",
     "pages/grade/grade",
     "pages/map/map",

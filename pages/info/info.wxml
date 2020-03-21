@@ -1,6 +1,6 @@
 <header  titleTxt="海大简介" hideHeader="{{hideHeader}}" back="{{back}}" showAvatar="{{showAvatar}}" background="url('http://img4.imgtn.bdimg.com/it/u=1048885110,1322513254&fm=26&gp=0.jpg')"></header>
 <view class="buttonList">
-  <view class="goButton">
+  <view class="goButton"  catchtap="goTap">
     <image class="infoImg" src="../../images/position.png"></image>
     <text class="infoTxt">我在海大</text>
   </view>

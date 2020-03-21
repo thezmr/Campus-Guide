@@ -1,0 +1,87 @@
+/* components/map/map.wxss */
+
+.pop-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  transition: all 0.4s;
+}
+
+.pop-container.show {
+  height: 60%;
+  transition: all 0.4s;
+}
+
+.title-bar {
+  position: absolute;
+  width: 100%;
+  height: 60rpx;
+  top: 0;
+}
+
+.pop-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15%;
+  height: 15rpx;
+  transform: translate(-50%, -50%);
+  background: #eee;
+  border-radius: 30rpx;
+}
+
+.list-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 60rpx;
+  background: #fff;
+}
+
+.list {
+  position: relative;
+  width: 90%;
+  height: 100rpx;
+  margin-top: 10rpx;
+  margin-left: 5%;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.placeName {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-size: 35rpx;
+  color: #003047;
+}
+
+.distance {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(0, -50%);
+  font-size: 25rpx;
+  color: #cdcdcd;
+}
+
+.go {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 50rpx;
+  height: 50rpx;
+  transform: translate(0, -50%);
+}

@@ -1,18 +1,3 @@
-<header titleTxt="海大地图" hideHeader="{{hideHeader}}" back="{{back}}"></header>
-<view class="map-container">
-  <map id="map" longitude="121.521164" latitude="38.871773" scale="20" show-location style="width: 100%; height: 300px;"></map>
-</view>
-<view class="guide-container">
-  <view class="tab-header" catchtap="showTap">
-    <view class="tab-button">
-      <image class="tab-left" src="../../images/left.png" catchtap="leftTap"></image>{{backDt[index].type}}
-      <image class="tab-right" src="../../images/right.png" catchtap="rightTap"></image>
-    </view>
-  </view>
-  <view class="place-content {{show ? '' : 'show:'}}">
-    <view class="content-button" wx-if="{{!show}}" wx:for="{{backDt[index].list}}" wx:for-item="item"  wx:key="backDt[index].id">{{item.name}}</view>
-  </view>
-  <image class="place-card" src="http://img4.imgtn.bdimg.com/it/u=2863502123,2281896351&fm=26&gp=0.jpg">
-    <text class="placeTxt">学汇楼</text>
-  </image>
-</view>
+<header titleTxt="海大地图" hideHeader="{{hideHeader}}" back="{{back}}" background="#5191e1"></header>
+<map id="map" longitude="{{currentLong}}" latitude="{{currentLat}}" markers="{{markers}}"scale="18" show-location="true" style="width: 100%; height:100%" wx:if="{{map}}"></map>
+<mymap placeList="{{list}}" position="{{position}}"  bind:sonevent="get_emit"></mymap>

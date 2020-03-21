@@ -7,17 +7,32 @@ Page({
     showAvatar: false,
     back: true,
     photoUrl: "",
-    place: ""
+    photoUrl2: "",
+    showPhoto2:false,
+    place: "",
+    place2: "",
+    arr:[],
+    index:0
   },
   getPhoto() {
     wx.cloud.callFunction({
       name: 'getPhoto',
     }).then(res => {
       console.log('请求成功', res)
+      let arr2 = this.data.arr.concat(res)
+      console.log(arr2)
       this.setData({
-        photoUrl: res.result.list[0].url,
-        place: res.result.list[0].place
+        showPhoto2: !this.data.showPhoto2,
       })
+      if(this.data.showPhoto2){
+        this.setData({
+          // showPhoto2: !this.data.showPhoto2,
+          photoUrl: res.result.list[0].url,
+          photoUrl2: res.result.list[1].url,
+          place: res.result.list[0].place,
+          place2: res.result.list[1].place,
+        })
+      }
     }).catch(err => {
       console.log('请求失败', err)
     })

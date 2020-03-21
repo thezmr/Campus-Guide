@@ -8,6 +8,6 @@ cloud.init({
 // 云函数入口函数
 exports.main = async(event, context) => {
   return cloud.database().collection('photo').aggregate().sample({
-    size: 1
+    size: 2
   }).end();
 }
