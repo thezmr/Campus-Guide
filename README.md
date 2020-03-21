@@ -1,6 +1,8 @@
 # 海大导览
 一款开源的校园导览小程序，未使用UI开源组件库，界面美观清新
 # 首页（host）:
+
+<img src="https://github.com/YXZYG/Campus-Guide/blob/master/images/1.png" width="50%" height="50%">
 ![image](https://github.com/YXZYG/Campus-Guide/blob/master/images/1.png)
 ![image](https://github.com/YXZYG/Campus-Guide/blob/master/images/2.png)
 # 校园简介（info）：
